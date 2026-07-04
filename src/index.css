@@ -1,0 +1,39 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=switzer@400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-void: #0A0E1A;
+  --color-void-2: #121729;
+  --color-paper: #F4F6FB;
+  --color-paper-2: #FFFFFF;
+  --color-ink: #171B2E;
+  --color-mist: #8B93AC;
+  --color-marigold: #F5A93F;
+  --color-vermillion: #EF5C3F;
+  --color-signal-teal: #3FD6C4;
+
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Switzer', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-void);
+    color: var(--color-mist);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  ::selection {
+    background-color: var(--color-marigold);
+    color: var(--color-void);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: white;
+  }
+}
