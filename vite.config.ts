@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/AlwaysAbsent1.github.io/',
+  base: process.env.CF_PAGES ? '/' : '/AlwaysAbsent1.github.io/',
   plugins: [react(), tailwindcss()],
 })
